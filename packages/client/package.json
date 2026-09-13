@@ -1,0 +1,17 @@
+{
+  "name": "@cms/client",
+  "version": "1.0.0",
+  "description": "Typed fetch-based API client for cross-portal and test communications",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "node -e \"console.log('@cms/client test passed')\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}

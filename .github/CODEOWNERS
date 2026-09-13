@@ -1,0 +1,63 @@
+# ==============================================================================
+# MONOREPO CODEOWNERS
+# ==============================================================================
+# Global rule: Everything requires approval from at least one repository owner
+* @team01-member1 @team01-member2 @team01-member3
+
+# ==============================================================================
+# TEAM 01: Platform, Infrastructure, Database Foundation, CI/CD, & Testing
+# ==============================================================================
+/package.json                  @team01-member1 @team01-member2 @team01-member3
+/package-lock.json             @team01-member1 @team01-member2 @team01-member3
+/turbo.json                    @team01-member1 @team01-member2 @team01-member3
+/tsconfig.json                 @team01-member1 @team01-member2 @team01-member3
+/tsconfig.base.json            @team01-member1 @team01-member2 @team01-member3
+/.github/                      @team01-member1 @team01-member2 @team01-member3
+/playwright.config.ts          @team01-member1 @team01-member2 @team01-member3
+
+/packages/config/              @team01-member1 @team01-member2 @team01-member3
+/packages/http/                @team01-member1 @team01-member2 @team01-member3
+/packages/client/              @team01-member1 @team01-member2 @team01-member3
+/packages/models/src/db.ts     @team01-member1 @team01-member2 @team01-member3
+/packages/models/src/define-model.ts @team01-member1 @team01-member2 @team01-member3
+
+/scripts/seed/index.ts         @team01-member1 @team01-member2 @team01-member3
+/scripts/seed/core.seed.ts     @team01-member1 @team01-member2 @team01-member3
+
+/apps/*/vercel.json            @team01-member1 @team01-member2 @team01-member3
+/apps/*/api/                   @team01-member1 @team01-member2 @team01-member3
+/apps/*/src/app.ts             @team01-member1 @team01-member2 @team01-member3
+
+# ==============================================================================
+# TEAM 02: Authentication, RBAC & Security (Placeholder)
+# ==============================================================================
+# /apps/*/src/routes/auth/     @team02-lead @team02-member
+# /packages/models/src/schemas/token.model.ts @team02-lead
+
+# ==============================================================================
+# TEAM 03: Student Portal Features & Admissions (Placeholder)
+# ==============================================================================
+# /apps/student/src/features/  @team03-lead @team03-member
+
+# ==============================================================================
+# TEAM 04: Faculty & Teacher Workspace (Placeholder)
+# ==============================================================================
+# /apps/teacher/src/features/  @team04-lead @team04-member
+
+# ==============================================================================
+# TEAM 05: Attendance Tracking & Reporting (Placeholder)
+# ==============================================================================
+# /scripts/seed/attendance.seed.ts @team05-lead
+
+# ==============================================================================
+# TEAM 06: Examinations & Grade Ledgers (Placeholder)
+# ==============================================================================
+# /scripts/seed/marks.seed.ts   @team06-lead
+
+# ==============================================================================
+# TEAMS 07-13: Curriculum, Fees, Library, Timetable, Placement, Analytics, Notifications
+# ==============================================================================
+# /packages/models/src/schemas/fee.model.ts       @team07-lead
+# /packages/models/src/schemas/book.model.ts      @team08-lead
+# /packages/models/src/schemas/timetable.model.ts @team09-lead
+# /packages/models/src/schemas/placement.model.ts @team11-lead
