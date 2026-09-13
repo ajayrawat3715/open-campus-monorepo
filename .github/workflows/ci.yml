@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Cancel redundant in-progress runs for the same branch/PR
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Lint, Typecheck, Test & Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      MONGODB_URI: "mongodb://127.0.0.1:27017/ci-test-db"
+      NODE_ENV: "test"
+
+    steps:
+      - name: 1. Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: 3. Clean install dependencies
+        run: npm ci
+
+      - name: 4. Run Linter
+        run: npm run lint
+
+      - name: 5. Run Typecheck
+        run: npm run typecheck
+
+      - name: 6. Run Unit & Integration Tests
+        run: npm run test
+
+      - name: 7. Build Monorepo Artifacts
+        run: npm run build

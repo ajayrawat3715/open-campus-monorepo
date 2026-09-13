@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@cms/config": ["packages/config/src/index.ts"],
+      "@cms/http": ["packages/http/src/index.ts"],
+      "@cms/client": ["packages/client/src/index.ts"],
+      "@cms/models": ["packages/models/src/index.ts"],
+      "@cms/validation": ["packages/validation/src/index.ts"]
+    }
+  },
+  "include": ["apps/**/*.ts", "packages/**/*.ts", "scripts/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules", "dist", "build"]
+}

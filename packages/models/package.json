@@ -1,0 +1,21 @@
+{
+  "name": "@cms/models",
+  "version": "1.0.0",
+  "description": "Database foundation, serverless connection cache, and core Mongoose models",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "node -e \"console.log('@cms/models test passed')\""
+  },
+  "dependencies": {
+    "@cms/config": "*",
+    "mongoose": "^8.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}

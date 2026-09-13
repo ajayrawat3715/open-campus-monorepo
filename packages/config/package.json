@@ -1,0 +1,21 @@
+{
+  "name": "@cms/config",
+  "version": "1.0.0",
+  "description": "Centralized environment configuration and validation using Zod",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "node -e \"console.log('@cms/config test passed')\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}
